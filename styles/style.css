@@ -16,3 +16,24 @@
   background-color: #ffffff;
   border-top: 1px solid #eaeef2;
 }
+
+details > summary {
+  cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::after {
+  float: right;
+  font-weight: 700;
+}
+
+details[open] > summary::after {
+  content: "−";
+}
+
+details:not([open]) > summary::after {
+  content: "+";
+}

@@ -14,7 +14,7 @@
   <nav class="navbar is-light" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
+        <a class="navbar-item" href="index.html">
           <strong>📊 КриптоМонитор</strong>
         </a>
         <span class="navbar-burger" data-target="navMenu">
@@ -23,11 +23,9 @@
       </div>
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item">Главная</a>
-          <a class="navbar-item">Курсы</a>
-          <a class="navbar-item">Аналитика</a>
-          <a class="navbar-item">Портфель</a>
-          <a class="navbar-item">Контакты</a>
+          <a class="navbar-item is-active" href="index.html" aria-current="page">Главная</a>
+          <a class="navbar-item" href="contacts.html">Контакты / Отзывы</a>
+          <a class="navbar-item" href="faq.html">FAQ</a>
         </div>
       </div>
     </div>
@@ -124,21 +122,29 @@
   <footer class="footer">
     <div class="container">
       <div class="columns">
-        <div class="column is-half">
+        <div class="column is-5">
           <p><strong>📊 КриптоМонитор</strong></p>
           <p>Сервис для мониторинга криптовалют. Данные в реальном времени.</p>
         </div>
-        <div class="column">
+        <div class="column is-3">
           <p class="has-text-weight-bold">Контакты</p>
           <p><i class="fas fa-envelope"></i> hello@cryptomonitor.io</p>
           <p><i class="fas fa-phone"></i> +7 999 123-45-67</p>
         </div>
-        <div class="column">
+        <div class="column is-2">
           <p class="has-text-weight-bold">Соцсети</p>
           <p>
             <span class="icon"><i class="fab fa-telegram"></i></span> Telegram <br>
             <span class="icon"><i class="fab fa-twitter"></i></span> Twitter <br>
             <span class="icon"><i class="fab fa-github"></i></span> GitHub
+          </p>
+        </div>
+        <div class="column is-2">
+          <p class="has-text-weight-bold">Навигация</p>
+          <p>
+            <a href="index.html">Главная</a><br>
+            <a href="contacts.html">Контакты / Отзывы</a><br>
+            <a href="faq.html">FAQ</a>
           </p>
         </div>
       </div>
@@ -148,20 +154,6 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-      if ($navbarBurgers.length > 0) {
-        $navbarBurgers.forEach(el => {
-          el.addEventListener('click', () => {
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
-          });
-        });
-      }
-    });
-  </script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
